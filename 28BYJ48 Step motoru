@@ -1,0 +1,18 @@
+#include <Stepper.h>
+
+const int adim=60;
+
+Stepper motor(adim,10,11,12,13);
+
+void setup() 
+{
+  motor.setSpeed(60);
+}
+
+void loop() 
+{
+  motor.step(60);
+  delay(2000);
+  motor.step(60);
+  delay(2000);  
+}
