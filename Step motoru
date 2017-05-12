@@ -1,0 +1,40 @@
+#include <Stepper.h>
+
+int adim;
+
+Stepper motor1(adim,7,8,9,10);
+Stepper motor2(adim,3,4,5,6);
+
+void setup() 
+{
+  motor1.setSpeed(200);
+  motor2.setSpeed(200);
+}
+
+void loop() 
+{
+  int step1=analogRead(A0);
+
+  if(step1<490)
+  {
+    motor1.step(-1);
+  }
+  
+  if(step1>540)
+  {
+    motor1.step(1);
+  }
+
+  int step2=analogRead(A1);
+
+  if(step2<490)
+  {
+    motor2.step(-1);
+  }
+
+  if(step2>540)
+  {
+    motor2.step(1);
+  }
+
+}
