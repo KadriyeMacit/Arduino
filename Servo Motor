@@ -1,0 +1,25 @@
+#include <Servo.h>
+
+Servo motor;
+
+void setup() 
+{
+     motor.attach(8);
+     motor.write(0);  
+}
+
+void loop() 
+{
+     for(int derece=0; derece<180; derece++)
+     {
+      motor.write(derece);
+      delay(0);
+     }
+
+     for(int derece=180; derece>1; derece--)
+     {
+      motor.write(derece);
+      delay(0);
+     }
+
+}
