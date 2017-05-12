@@ -21,5 +21,4 @@ void loop()
       motor.write(derece);
       delay(0);
      }
-
 }
